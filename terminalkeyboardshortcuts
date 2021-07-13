@@ -1,0 +1,19 @@
+CTRL+a/CTRL+e -> Move to the beginning/end of the line.
+
+CTRL+b/CTRL+f -> Move the cursor left/right. (so you can keep your hands snuggly on the keyboard, and not have to reach over to the arrow keys)
+
+CTRL+u/CTRL+k -> Delete everything from the cursor to the beginning/end of the line. Adds cut content to terminal cliptray
+
+CTRL+w -> Remove the characters from the cursor to the beginning of the 'word'.
+
+CTRL+d -> Delete the character under the cursor. (but don't use that when the line is empty, or it will close the terminal.)
+
+CTRL+r -> Let's you enter a pattern and then searches for it in the commandline history. If you find something you can hit CTRL+r again so search farther. Enter will execute the found command. CTRL+c will cancel the search. ESC will leave the search prompt and keep the result on the commandline.
+
+CTRL+s/CTRL+q -> Pauses/continues the terminal output
+
+CTRL+z -> Puts the running command into suspend and gives you a command prompt (like the :!sh they have shown) .. 'fg' will put the suspended command back into the foreground, 'bg' will continue the suspended command in the background.
+
+ESC+_ -> Insert the last parameter of the previous command. Type the sequence again to get the last parameter of the command before the previous command, and so on...
+
+CNTL+y -> paste contents of terminal cliptray to command line 

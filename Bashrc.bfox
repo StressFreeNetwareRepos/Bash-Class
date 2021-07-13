@@ -47,8 +47,7 @@ fi
 # "%emacs".
 auto_resume=exact
 
-# Set notify if you want to be asynchronously notified about background
-# job completion.
+# Set notify if you want to be asynchronously notified about background job completion.
 set -o notify
 
 # Make it so that failed `exec' commands don't flush this shell.
@@ -57,9 +56,8 @@ shopt -s execfail
 if [ -z "$LOGIN_SHELL" ]; then
 	PS1="\u@\h\$ "
 fi
-
-HISTSIZE=256
-MAILCHECK=60
+#set HISTSIZE to howevermany lines you would like to keep in your history
+HISTSIZE=256000
 
 # A couple of default aliases.
 alias j='jobs -l'
@@ -67,4 +65,3 @@ alias po=popd
 alias pu=pushd
 alias ls='ls -F'
 
-[ -f ~/.bash_aliases ] && . ~/.bash_aliases

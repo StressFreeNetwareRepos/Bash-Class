@@ -1,5 +1,4 @@
-##For it to look pretty and make sense if it doesn't right now just run the command bash README in the Bash-Class home directory.
-
+#!/bin/bash
 
 echo  $(realpath $0)
 echo
@@ -13,3 +12,14 @@ echo for manual configuring keep reading."
 echo 
 echo -n "Your Current Distro:"
 lsb_release -a 2>/dev/null | awk '{if(NR==2) print $2}'
+echo -e "cat /proc/meminfo to see total swap, and free swap (all linux) \n
+    cat /proc/swaps to see which swap devices are being used (all linux) \n
+    swapon -s to see swap devices and sizes (where swapon is installed) \n
+    vmstat for current virtual memory statistics"
+
+#to debug a script bash -x PathToTheScriptToDebug
+##For it to look pretty and make sense if it doesn't right now just run the command bash README in the Bash-Class home directory.
+fortune | /usr/games/cowthink -f pony.cow
+rig
+bb
+

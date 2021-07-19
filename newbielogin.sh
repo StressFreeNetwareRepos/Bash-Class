@@ -1,8 +1,9 @@
 #!/bin/bash
-echo "CNTRL C to terminate the educational net-security farm animals early, They
+echo "CNTRL-C to terminate the educational net-security ACII art presentation early, They
 will begin in approximately five seconds." 
 sleep 5
 echo 
+
 echo " It is highly recommended for newbies to read."
 echo
 sleep 5

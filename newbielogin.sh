@@ -7,7 +7,7 @@ echo
 echo " It is highly recommended for newbies to read."
 echo
 sleep 5
-( sleep 240 ) & # <-- The long running process.
+( sleep 270 ) & # <-- The long running process.
 
 seconds=1
 while jobs %1 &>/dev/null ; do
@@ -52,11 +52,17 @@ fi
         cowsay -f fox "In as brief summary as I can manage, proxies basically are clients that sit between you and a client and grab requests from either side and evaluate it before sending the rest of the way through this way you never make a direct connection to the other server. VPNs are more like encrypted tunnels that also potentially slightly modify traffic as it goes through but the big difference is your requests when you use proxies can still be intercepted via wireshark or other means and read in plaintext where as with a VPN your traffic is encrypted until it reaches the server. Honestly you need both if you want security and anonymity." 
         sleep 30
 fi
+if [[ $runtime > 210 ]] & [[ $runtime < 240 ]] 
+then
+	cowsay "A proxy is an internet-facing server that forwards the queries you make to the intended web server
+Optimally, this should be paired with a full tunnel VPN (split tunnel may be required); a VPN is a networking protocol established 
+to provide an encrypted network connection between two endpoints, in this case your system to the internet. Using a proxy mask your identity and a VPN to encrypt all traffic
+over the established network connection, you're set with a strong security posture that has both confidentiality and integrity in place."
 
-
-    if    [[ $runtime > 210  ]] & [[ $runtime < 240 ]]  
+fi 
+    if    [[ $runtime > 240  ]] & [[ $runtime < 270 ]]  
         then
-        cowsay -f mech "Last but not least, make sure to wipe your browsing info regularly. This is especially true for cookies, offline/HTML storage, and LSOs (aka 'Flash Cookies'), as this information could easily be used to identify you."
+        cowsay -f mech "Last but far from least, make sure to wipe your browsing info regularly. This is especially true for cookies, offline/HTML storage, and LSOs (aka 'Flash Cookies'), as this information could easily be used to identify you."
 
         sleep 15
 fi
@@ -64,4 +70,4 @@ break
 
 done
 echo Done.
-shell bashrc useragent canvasfingerprinting proxies clients  
+#shell bashrc useragent canvasfingerprinting proxies clients  
